@@ -1,0 +1,34 @@
+site_name: AD - Accés a Dades - Ficheros
+
+extra_css:
+  - css/extra.css
+  - img/favicon.ico 
+
+theme: 
+  name: readthedocs
+  features:
+    - navigation.expand
+    - navigation.sections
+    - navigation.tabs
+    - copy-to-clipboard
+    - content.code.copy
+  #highlightjs: true
+  logo: assets/logocaminas.png
+    
+
+#extra_javascript:
+#  - js/extra.js
+
+
+markdown_extensions:
+  - admonition
+  - tables    
+  - attr_list
+  - toc
+  - md_in_html
+
+nav:
+  - IntelliJ Idea Ultimate: Idea.md
+  - Kotlin: Kotlin.md  
+
+       
