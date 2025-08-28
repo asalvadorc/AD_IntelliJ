@@ -1,6 +1,6 @@
 ---
-title:  "Accés a Dades - Fitxers"
+title:  "Acceso a Datos - IntelliJ"
 ---
 
-![ref1](T1_Portada.png)
+![ref1](Portada.png)
 

@@ -45,6 +45,20 @@ En este módulo nos centraremos en estas configuraciones:
 |![Idea 1](img/new_project.png)|![Idea 2](img/new_project_gradle.png)|
 
 
+## Proyecto nuevo
+
+
+Una vez elegida la configuración del proyecto según nuestras necesidades, se genera automáticamente la estructura de carpetas donde guardaremos nuestros programas. Dentro de la carpeta **src** podemos añadir directamente los archivos Kotlin o, si lo preferimos, crear paquetes para organizar mejor el código.
+
+
+|![Idea 3](img/new.png)|
+
+En los proyectos creados con Gradle la estructura de carpetas varía ligeramente. Para añadir nuestros programas debemos ir a la ruta **src/main/kotlin**, mientras que en la raíz del proyecto también se genera la carpeta **resources** (destinada a archivos auxiliares como datos o configuraciones) y los ficheros de configuración propios de **Gradle**, como **build.gradle.kts**.
+
+
+|![Idea 4](img/new_gradle.png)|
+
+
 ## Estructura de los proyectos por UD
 
 Por cada UD se crearán uno o varios proyectos con una estructura fija para facilitar su corrección.
@@ -73,7 +87,7 @@ Para esta unidad didáctica, crearemos un proyecto llamado **BDRelacionales**, c
 Con el fin de mantener una estructura organizada y diferenciada según el tipo de base de datos, se crearán dos paquetes:
 
 - **Postgres**: donde se incluirán todos los ejemplos orientados al uso de bases de datos PostgreSQL.
-- **Sqlite**: donde se desarrollarán los ejemplos utilizando bases de datos SQLite, tanto embebidas como externas.
+- **SQLite**: donde se desarrollarán los ejemplos utilizando bases de datos SQLite, tanto embebidas como externas.
 
 En cada tema se especificará en qué paquete debe desarrollarse cada ejercicio, según la base de datos utilizada.
 
@@ -87,34 +101,9 @@ En cada tema se especificará en qué paquete debe desarrollarse cada ejercicio,
 
 ## Formato entrega ejercicios
 
-Los ejercicios podéis realizarlos:
-
-En ese mismo proyecto: en este caso, es recomendable crear una carpeta aparte llamada ejercicios para localizarlos fácilmente.
-
-En un proyecto diferente: este será el que me entregaréis para su corrección.
-La estructura para cada UD será la siguiente:
-
-
-<!--El siguiente vídeo muestra todo el proceso de instalación y creación del primer proyecto. Corresponde a una versión anterior, pero totalmente similar a la actual.-->
-
-<!--
-# Galería de imágenes
-
-## Idea 1
-
-![Idea 1](img/idea1.png)
-
-## Idea 2
-
-![Idea 2](img/idea2.png)
-
--->
-
-_________
-
-<!--
-<iframe src="https://slides.com/aliciasalvador/2021-2022-tema1_instal_intellij/embed" width="576" height="420" title="Copy of 2021-2022 Tema1_Instal_IntelliJ" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
--->
+- 💻 Todos los ejercicios se hacen sobre la aplicación **IntelliJ Ultimate**.  
+- 📂 Cada ejercicio se entregará en un proyecto diferente y se subirá en la tarea correspondiente comprimiéndolo en un archivo **.zip**.  
+- ⚠️ El ejercicio que no se suba en su entrega correspondiente **no podrá ser calificado**.  
 
 
 
