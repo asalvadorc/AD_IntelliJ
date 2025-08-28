@@ -28,7 +28,7 @@ markdown_extensions:
   - md_in_html
 
 nav:
-  - IntelliJ Idea Ultimate: Idea.md
-  - Kotlin: Kotlin.md  
+  - 🔹IntelliJ Idea Ultimate: Idea.md
+  - 🔹Kotlin: Kotlin.md  
 
        

@@ -13,7 +13,7 @@ Los principales usos de Kotlin son:
 - Desarrollo multiplataforma (Kotlin Multiplatform)
 
 
-## Gestión de excepciones
+## 🔹Gestión de excepciones
 
 Una **excepción** es un error que ocurre en tiempo de ejecución y que interrumpe el flujo normal del programa (por ejemplo: dividir por cero, leer un archivo que no existe, etc.).
 
@@ -115,7 +115,7 @@ Internamente, **use** hace lo mismo que esto:
 
 
 
-## Funciones lambda
+## 🔹Funciones lambda
 
 Kotlin permite trabajar de forma concisa con **funciones lambda**, utilizando la palabra clave **it** para referirse al parámetro implícito cuando hay solo uno.
 

@@ -1,4 +1,4 @@
-# IntelliJ Idea Ultimate
+# 🔹IntelliJ Idea Ultimate
 
 Todos nuestros programas estarán realizados en **Kotlin**, lenguaje desarrollado por JetBrains, y que está por encima de Java, por lo que todos los programas, clases... , realizados en Java, los podremos utilizar sin problemas, y además nos permitirá una programación mucho más cómoda. Además, es el lenguaje que utilizará tanto en el módulo de **PMDM** como en el de **DI**.
 
@@ -9,7 +9,7 @@ Todos nuestros programas estarán realizados en **Kotlin**, lenguaje desarrollad
 En el **apartado de Configuración** tenéis las indicaciones para crear cada uno de los proyectos correspondientes a cada UD de este módulo.
 
 
-## Instalación
+## 🔹Instalación
 
 En el momento de realizar estos apuntes la última versión es la **2025**. El enlace para su descarga es **[https://www.jetbrains.com/idea/](https://www.jetbrains.com/idea/)**{.azul}.
 
@@ -27,7 +27,7 @@ Seleccionamos **Download** y descargamos la **versión Ultimate**, que es la que
     ---------------------------|-----------------------------
 
 
-## Configuración
+## 🔹Configuración
 
 Cuando creamos un nuevo proyecto en IntelliJ IDEA, el IDE nos ofrece diferentes configuraciones y plantillas iniciales: Java, Kotlin, proyectos con **Gradle** o **Maven**, aplicaciones Android, entre otras.
 
@@ -45,7 +45,7 @@ En este módulo nos centraremos en estas configuraciones:
 |![Idea 1](img/new_project.png)|![Idea 2](img/new_project_gradle.png)|
 
 
-## Proyecto nuevo
+## 🔹Proyecto nuevo
 
 
 Una vez elegida la configuración del proyecto según nuestras necesidades, se genera automáticamente la estructura de carpetas donde guardaremos nuestros programas. Dentro de la carpeta **src** podemos añadir directamente los archivos Kotlin o, si lo preferimos, crear paquetes para organizar mejor el código.
@@ -59,11 +59,11 @@ En los proyectos creados con Gradle la estructura de carpetas varía ligeramente
 |![Idea 4](img/new_gradle.png)|
 
 
-## Estructura de los proyectos por UD
+## 🔹Estructura de los proyectos por UD
 
 Por cada UD se crearán uno o varios proyectos con una estructura fija para facilitar su corrección.
 
-### UD Ficheros
+### 🔹UD Ficheros
 
 En esta unidad crearemos dos proyectos:
 
@@ -80,7 +80,7 @@ A lo largo del tema se irá indicando en qué carpeta debe colocarse cada ejempl
 
 
 
-### UD BD Relacionales
+### 🔹UD BD Relacionales
 
 Para esta unidad didáctica, crearemos un proyecto llamado **BDRelacionales**, configurado **con Gradle**. Este proyecto se utilizará para realizar todos los ejemplos y ejercicios relacionados con el acceso a bases de datos relacionales desde Kotlin.
 
@@ -93,13 +93,14 @@ En cada tema se especificará en qué paquete debe desarrollarse cada ejercicio,
 
 ![Idea](img/estruc_bdrela2.png)
 
-### UD BD ORM
+<!--
+### 🔹UD BD ORM
 
-### UD BD NoSQL
+### 🔹UD BD NoSQL
 
-### UD Componentes
-
-## Formato entrega ejercicios
+### 🔹UD Componentes
+-->
+## 🔹Formato entrega ejercicios
 
 - 💻 Todos los ejercicios se hacen sobre la aplicación **IntelliJ Ultimate**.  
 - 📂 Cada ejercicio se entregará en un proyecto diferente y se subirá en la tarea correspondiente comprimiéndolo en un archivo **.zip**.  
