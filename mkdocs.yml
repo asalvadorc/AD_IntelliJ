@@ -28,7 +28,8 @@ markdown_extensions:
   - md_in_html
 
 nav:
-  - 🔹IntelliJ Idea Ultimate: Idea.md
+  - 🔹Introducción: intro.md
+  - 🔹IntelliJ IDEA Ultimate : Idea.md
   - 🔹Entrega Ejercicios: ejercicios.md
   - 🔹Kotlin: Kotlin.md  
 

@@ -1,13 +1,8 @@
-# 🔹IntelliJ Idea Ultimate
-
-Todos nuestros programas estarán realizados en **Kotlin**, lenguaje desarrollado por JetBrains, y que está por encima de Java, por lo que todos los programas, clases... , realizados en Java, los podremos utilizar sin problemas, y además nos permitirá una programación mucho más cómoda. Además, es el lenguaje que utilizará tanto en el módulo de **PMDM** como en el de **DI**.
-
-**IntelliJ IDEA** es la herramienta ideal para **Kotlin** porque está diseñada pensando en él, especialmente porque lo desarrolló **JetBrains** (los creadores de Kotlin). Reduce el tiempo de configuración, nos da herramientas avanzadas para escribir y depurar código, y simplifica todo el proceso de desarrollo.
+# 🔹IntelliJ IDEA Ultimate
 
 **IntelliJ IDEA** ya lo conocéis, porque lo habéis estado utilizando en el módulo de programación de primero, no obstante, en el **apartado de Instalación** tenéis algunas indicaciones sobre su descarga e instalación.
 
 En el **apartado de Configuración** tenéis las indicaciones para crear cada uno de los proyectos correspondientes a cada UD de este módulo.
-
 
 ## 🔹Instalación
 
