@@ -12,6 +12,9 @@ Los principales usos de Kotlin son:
 - Backends web (con frameworks como Ktor o Spring)
 - Desarrollo multiplataforma (Kotlin Multiplatform)
 
+Existen muchos tutoriales sobre Kotlin en los que podéis aprender su sintaxis. El sitio oficial es https://kotlinlang.org/docs/getting-started.html.
+
+En los aparatados siguietes se describen brevemente algunas particularidades propias del lenguaje Kotlin que son interesantes.
 
 ## 🔹Gestión de excepciones
 
