@@ -216,3 +216,81 @@ Es equivalente a:
 
 
 
+## 🔹Data class en Kotlin
+
+
+En Kotlin, un `data class` es una clase especialmente diseñada para almacenar información.  
+Se usa cuando el objetivo principal es representar datos, no definir comportamiento o lógica compleja.
+
+
+    data class Persona(val nombre: String, val edad: Int)
+
+
+Los `data class` se utilizan para modelar objetos de datos (entidades, registros, documentos), simplificar el código y facilitar operaciones como comparar, copiar o mostrar objetos.
+
+| Uso principal | Descripción breve |
+|----------------|------------------|
+| Ficheros | Representan la estructura de los datos que se leen o escriben en archivos (JSON, XML, CSV o binarios). |
+| Bases de datos relacionales | Modelan entidades o registros de tablas para facilitar el acceso y manipulación de datos. |
+| Bases de datos NoSQL | Representan documentos o colecciones en sistemas como MongoDB o Firebase. |
+| APIs REST | Sirven para enviar y recibir datos en formato JSON entre cliente y servidor. |
+| Interfaces gráficas | Describen el estado o los elementos que maneja la interfaz de usuario. |
+| Modelo de dominio | Definen las entidades principales de la lógica de negocio de una aplicación. |
+| Comunicación y serialización | Permiten intercambiar información entre sistemas o guardar configuraciones estructuradas. |
+
+
+Al declarar una clase con `data`, Kotlin genera automáticamente:
+
+| Método | Descripción |
+|---------|-------------|
+| toString() | Devuelve una representación legible del objeto. |
+| equals() | Compara dos objetos por su contenido. |
+| hashCode() | Genera un código hash basado en los valores. |
+| copy() | Crea una copia del objeto cambiando uno o más campos. |
+| componentN() | Permite desestructurar el objeto. |
+
+**Ejemplo**
+
+    data class Persona(val nombre: String, val edad: Int)
+
+    fun main() {
+        val p1 = Persona("Ana", 25)
+        val p2 = Persona("Ana", 25)
+        val p3 = Persona("Luis", 30)
+
+        // toString(): muestra el contenido del objeto
+        println(p1.toString())
+        // Resultado: Persona(nombre=Ana, edad=25)
+
+        // equals(): compara el contenido de los objetos
+        println(p1 == p2)   // true
+        println(p1 == p3)   // false
+
+        // hashCode(): genera un código hash
+        println(p1.hashCode())
+        println(p2.hashCode())
+        // Ambos tienen el mismo hashCode porque su contenido es igual
+
+        // copy(): crea una copia con alguna modificación
+        val p4 = p1.copy(edad = 26)
+        println(p4)
+        // Resultado: Persona(nombre=Ana, edad=26)
+
+        // componentN(): permite desestructurar el objeto
+        val (nombre, edad) = p1
+        println(nombre)
+        println(edad)
+    }
+
+**Requisitos**
+
+- Debe tener al menos una propiedad en el constructor principal.
+- No puede ser abstract, open, sealed ni inner.
+- Las propiedades deben ser val o var.
+---
+
+
+**Conclusión**
+
+Los `data class` son una herramienta esencial en Kotlin.  
+Permiten representar información de forma clara, reducen código y facilitan la integración con ficheros, bases de datos, APIs y componentes de interfaz.
