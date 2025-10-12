@@ -216,7 +216,7 @@ Es equivalente a:
 
 
 
-## 🔹Data class en Kotlin
+## 🔹Data class
 
 
 En Kotlin, un `data class` es una clase especialmente diseñada para almacenar información.  
