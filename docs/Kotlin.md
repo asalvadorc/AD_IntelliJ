@@ -215,7 +215,6 @@ Es equivalente a:
     **it** es específico de Kotlin. En Java no existe como palabra clave ni como nombre implícito de parámetros.
 
 
-
 ## 🔹Data class
 
 

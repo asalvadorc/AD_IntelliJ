@@ -84,18 +84,22 @@ Con el fin de mantener una estructura organizada y diferenciada según el tipo d
 - **Postgres**: donde se incluirán todos los ejemplos orientados al uso de bases de datos PostgreSQL.
 - **SQLite**: donde se desarrollarán los ejemplos utilizando bases de datos SQLite, tanto embebidas como externas.
 
-En cada tema se especificará en qué paquete debe desarrollarse cada ejercicio, según la base de datos utilizada.
+En cada apartado se especificará en qué paquete debe desarrollarse cada ejercicio, según la base de datos utilizada.
 
 ![Idea](img/estruc_bdrela2.png)
 
-<!--
-### 🔹UD BD ORM
 
-### 🔹UD BD NoSQL
-
-### 🔹UD Componentes
--->
+### 🔹UD BD Documentales
 
 
+Para esta unidad didáctica, crearemos un proyecto llamado **BDNoSQL**, configurado **con Gradle**. Este proyecto se utilizará para realizar todos los ejemplos y ejercicios relacionados con el acceso a Bases de Datos documentales desde Kotlin.
 
+Con el fin de mantener una estructura organizada y diferenciada según el controlador utilizado, se crearán dos paquetes:
+
+- **mongo**: donde se incluirán los ejemplos en los que se utiliza el driver oficial de Mongo.
+- **kmongo**: donde se incluirán los ejemplos en los que se utiliza el driver KMongo.
+
+En cada apartado  se especificará en qué paquete debe desarrollarse cada ejercicio, según el controlador utilizado.
+
+![alt text](img/mongo.png)
 
