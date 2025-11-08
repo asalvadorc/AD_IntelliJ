@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>🔹Docker - AD - Accés a Dades - Ficheros</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+        <link href="../img/favicon.ico" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "\ud83d\udd39Docker";
+        var mkdocs_page_input_path = "docker.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="..">
+          <img src="../assets/logocaminas.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../intro/">🔹Introducción</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Idea/">🔹IntelliJ IDEA Ultimate</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../ejercicios/">🔹Entrega Ejercicios</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Kotlin/">🔹Kotlin</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">AD - Accés a Dades - Ficheros</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">🔹Docker</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="docker">🔹Docker</h1>
+<p>Docker es una herramienta que utiliza la tecnología de contenedores para empaquetar aplicaciones y sus dependencias en unidades portátiles y ligeras. Esto garantiza que una aplicación se ejecute de la misma manera en cualquier entorno, ya sea en una computadora local, un servidor de desarrollo, o en la nube.</p>
+<p>Toda la infomación la podéis encontrar en el sitio oficial de Docker <a href="https://docs.docker.com/manuals/">https://docs.docker.com/manuals/</a></p>
+<p>En esta imagen podemos ver como funciona la arquitectura básica de Docker.</p>
+<p><img alt="ref" src="../img/docker.png" /></p>
+<h2 id="conceptos-clave">🔹Conceptos clave</h2>
+<ul>
+<li><strong>Imágenes</strong>:</li>
+</ul>
+<p>Una imagen es una plantilla de solo lectura que se utiliza para crear contenedores. A
+partir de una imagen pueden crearse múltiples contenedores.
+Docker permite crear nuevas imágenes basándose en imágenes anteriores. Al crear una nueva imagen, simplemente estamos añadiendo una capa a la imagen anterior, la que actúa como base.</p>
+<ul>
+<li><strong>Contenedores</strong>:</li>
+</ul>
+<p>Son instancias de una imagen.
+Pueden ser arrancados, parados y ejecutados.
+Cada contenedor Docker posee un identificador único.
+Son entornos aislados que contienen todo lo necesario para ejecutar una aplicación: código, bibliotecas, dependencias, y configuraciones.
+A diferencia de las máquinas virtuales, los contenedores comparten el mismo núcleo del sistema operativo, lo que los hace más ligeros y eficientes.</p>
+<ul>
+<li><strong>Docker Engine</strong>:</li>
+</ul>
+<p>Es el motor que ejecuta y gestiona los contenedores.
+Permite construir imágenes, iniciar contenedores y comunicarse con el hardware del sistema. </p>
+<ul>
+<li><strong>Docker Hub</strong>:</li>
+</ul>
+<p>Es un repositorio en línea donde se pueden almacenar y compartir imágenes de Docker.
+Ofrece una amplia variedad de imágenes predefinidas listas para usar. Por defecto, Docker utiliza esta plataforma de registro.</p>
+<p><strong class="azul">Comandos habituales</strong></p>
+<p>En el uso diario de Docker, existen una gran cantidad de comandos que permiten trabajar con imágenes, contenedores, redes y volúmenes.
+Sin embargo, para iniciarse y poder manejarlo en clase, es suficiente con conocer un conjunto reducido de órdenes básicas.</p>
+<p>La siguiente tabla recoge los 10 comandos más utilizados en un entorno educativo. Con ellos podrás:</p>
+<table>
+<thead>
+<tr>
+<th>Comando</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>docker --version</code></td>
+<td>Muestra la versión instalada de Docker.</td>
+</tr>
+<tr>
+<td><code>docker pull &lt;imagen&gt;</code></td>
+<td>Descarga una imagen desde Docker Hub.</td>
+</tr>
+<tr>
+<td><code>docker images</code></td>
+<td>Lista las imágenes descargadas en el sistema.</td>
+</tr>
+<tr>
+<td><code>docker ps -a</code></td>
+<td>Lista todos los contenedores (activos y detenidos).</td>
+</tr>
+<tr>
+<td><code>docker run -it &lt;imagen&gt;</code></td>
+<td>Crea y arranca un contenedor en modo interactivo con terminal.</td>
+</tr>
+<tr>
+<td><code>docker start &lt;contenedor&gt;</code></td>
+<td>Inicia un contenedor detenido.</td>
+</tr>
+<tr>
+<td><code>docker stop &lt;contenedor&gt;</code></td>
+<td>Detiene un contenedor en ejecución.</td>
+</tr>
+<tr>
+<td><code>docker rm &lt;contenedor&gt;</code></td>
+<td>Elimina un contenedor detenido.</td>
+</tr>
+<tr>
+<td><code>docker build -t &lt;nombre&gt; .</code></td>
+<td>Construye una imagen a partir de un <code>Dockerfile</code>.</td>
+</tr>
+<tr>
+<td><code>docker-compose up</code></td>
+<td>Levanta servicios definidos en <code>docker-compose.yml</code>.</td>
+</tr>
+<tr>
+<td><code>docker save -o &lt;fichero&gt; &lt;imagen&gt;</code></td>
+<td>Copia de seguridad de una imagen en un fichero.</td>
+</tr>
+<tr>
+<td><code>docker load -i &lt;fichero&gt;</code></td>
+<td>Importar un fichero para crear una imagen.</td>
+</tr>
+</tbody>
+</table>
+<p>Para saber más podéis consultar su página Web: <a href="https://www.docker.com/">https://www.docker.com/</a></p>
+<h2 id="instalacion-en-ubuntu">🔹Instalación en Ubuntu</h2>
+<p><a href="https://docs.docker.com/desktop/setup/install/linux/ubuntu/">https://docs.docker.com/desktop/setup/install/linux/ubuntu/</a></p>
+<p><a href="https://docs.docker.com/engine/install/ubuntu/">https://docs.docker.com/engine/install/ubuntu/</a></p>
+<h3 id="requisitos-previos">🔹Requisitos previos</h3>
+<ul>
+<li>Asegúrate de que tu sistema está actualizado:</li>
+</ul>
+<pre><code class="language-bash">sudo apt update &amp;&amp; sudo apt upgrade -y
+</code></pre>
+<ul>
+<li>Desinstala versiones antiguas de Docker si están instaladas:</li>
+</ul>
+<pre><code class="language-bash">sudo apt remove docker docker-engine docker.io containerd runc
+</code></pre>
+<h3 id="pasos-para-instalar-docker">🔹Pasos para instalar Docker</h3>
+<p>1) <strong>Instalar paquetes necesarios:</strong></p>
+<pre><code class="language-bash">sudo apt install apt-transport-https ca-certificates curl software-properties-common
+</code></pre>
+<p>2) <strong>Agregar la clave GPG de Docker:</strong></p>
+<pre><code class="language-bash">curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+</code></pre>
+<p>3) <strong>Agregar el repositorio de Docker:</strong></p>
+<pre><code class="language-bash">echo &quot;deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable&quot; | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+</code></pre>
+<p>4) <strong>Actualizar el índice de paquetes e instalar Docker:</strong></p>
+<pre><code class="language-bash">sudo apt update
+sudo apt install docker-ce docker-ce-cli containerd.io
+</code></pre>
+<p>5) <strong>Verificar la instalación:</strong></p>
+<pre><code class="language-bash">docker --version
+</code></pre>
+<p>6) <strong>Habilitar Docker para que inicie con el sistema:</strong></p>
+<pre><code class="language-bash">sudo systemctl enable docker
+</code></pre>
+<p>7) <strong>Opcional: Permitir ejecutar Docker sin <code>sudo</code>:</strong></p>
+<pre><code class="language-bash">sudo usermod -aG docker $USER
+# Sal y vuelve a iniciar sesión para aplicar los cambios
+</code></pre>
+<h3 id="probar-docker">🔹Probar Docker</h3>
+<p>Ejecuta el siguiente comando para probar si Docker está funcionando correctamente:</p>
+<pre><code>    docker run hello-world
+</code></pre>
+<hr />
+<h2 id="instalacion-en-windows">🔹Instalación en Windows</h2>
+<p><a href="https://docs.docker.com/desktop/setup/install/windows-install/">https://docs.docker.com/desktop/setup/install/windows-install/</a></p>
+<p><a href="https://docs.docker.com/docker-for-windows/install/">https://docs.docker.com/docker-for-windows/install/</a></p>
+<h3 id="requisitos-previos_1">🔹Requisitos previos</h3>
+<ul>
+<li>Windows 10 o superior con soporte para WSL 2.</li>
+<li>Habilitar virtualización en el BIOS.</li>
+</ul>
+<h3 id="pasos-para-instalar-docker_1">🔹Pasos para instalar Docker</h3>
+<p>1) <strong>Descargar Docker Desktop:</strong></p>
+<ul>
+<li>Ve al sitio oficial de Docker y descarga Docker Desktop: <a href="https://www.docker.com/products/docker-desktop">https://www.docker.com/products/docker-desktop</a></li>
+</ul>
+<p><a href="https://www.youtube.com/watch?v=_9AWYlt86B8">vídeo de instalación</a></p>
+<p>2) <strong>Ejecutar el instalador:</strong></p>
+<ul>
+<li>Sigue las instrucciones del asistente de instalación.</li>
+</ul>
+<p>3) <strong>Habilitar WSL 2:</strong></p>
+<ul>
+<li>Asegúrate de que WSL 2 está habilitado en tu sistema:</li>
+</ul>
+<pre><code class="language-powershell">dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+wsl --set-default-version 2
+</code></pre>
+<p>4) <strong>Configurar Docker Desktop:</strong></p>
+<ul>
+<li>Abre Docker Desktop y sigue las instrucciones para configurar WSL 2.</li>
+</ul>
+<p>5) <strong>Verificar la instalación:</strong></p>
+<ul>
+<li>Abre una terminal y ejecuta:</li>
+</ul>
+<pre><code class="language-powershell">docker --version
+</code></pre>
+<p>6) <strong>Probar Docker:</strong></p>
+<ul>
+<li>Ejecuta el comando:</li>
+</ul>
+<pre><code class="language-powershell">docker run hello-world
+</code></pre>
+<h2 id="docker-compose">🔹Docker Compose</h2>
+<p>Docker Compose es una herramienta de Docker que permite definir y gestionar aplicaciones multicontenedor de forma sencilla.</p>
+<ul>
+<li>
+<p>Docker Desktop (Windows/Mac) → ya lo trae integrado.</p>
+</li>
+<li>
+<p>Linux con Docker Engine → hay que instalarlo aparte.</p>
+</li>
+</ul>
+<p>Con Docker Compose puedes describir en un archivo de configuración (normalmente docker-compose.yml) todos los servicios que forman tu aplicación.</p>
+<p>Comandos básicos de Docker Compose</p>
+<table>
+<thead>
+<tr>
+<th>Comando</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>docker-compose up</code></td>
+<td>Levanta los servicios definidos en el archivo <code>docker-compose.yml</code>.</td>
+</tr>
+<tr>
+<td><code>docker-compose down</code></td>
+<td>Detiene y elimina contenedores, redes y volúmenes creados.</td>
+</tr>
+<tr>
+<td><code>docker-compose ps</code></td>
+<td>Muestra el estado de los servicios gestionados por Compose.</td>
+</tr>
+<tr>
+<td><code>docker-compose logs</code></td>
+<td>Muestra los registros (logs) de los servicios en ejecución.</td>
+</tr>
+</tbody>
+</table>
+<p>👉 Ejemplo de archivo docker-compose.yml mínimo:</p>
+<pre><code>  version: "3.9"
+     services:
+     postgres:
+           image: postgres:16
+           container_name: mi_postgres
+           environment:
+           POSTGRES_USER: usuario
+           POSTGRES_PASSWORD: clave
+           POSTGRES_DB: mi_bd
+           ports:
+           - "5432:5432"
+           volumes:
+           - ./data:/var/lib/postgresql/data
+</code></pre>
+<p>Con este archivo, solo necesitarías ejecutar:</p>
+<pre><code>  docker-compose up
+</code></pre>
+<p>y ya tendrías corriendo un contenedor con PostgreSQL configurado.</p>
+<h2 id="copia-y-carga-de-imagenes">🔹Copia y carga de Imágenes</h2>
+<ul>
+<li><strong>Construcción de una imagen</strong>:</li>
+</ul>
+<p>Los desarrolladores crean un archivo llamado Dockerfile, donde se especifican los pasos para construir la imagen de una aplicación.
+A partir del Dockerfile, Docker genera una imagen.</p>
+<ul>
+<li><strong>Distribución de imágenes</strong>:</li>
+</ul>
+<p>Las imágenes pueden ser subidas a Docker Hub u otros registros privados para compartirlas y utilizarlas en diferentes sistemas.</p>
+<p>Una vez tengamos una imagen local en nuestro sistema, podemos hacer una <strong>copia de la misma</strong>, ya sea como copia de seguridad o como forma de transportarla a otros sistemas mediante el comando <strong>docker save</strong>. </p>
+<pre><code>  - docker save -o copiaSeguridad.tar imagen
+</code></pre>
+<p><a href="https://docs.docker.com/engine/reference/commandline/save/">https://docs.docker.com/engine/reference/commandline/save/</a></p>
+<p>Si queremos <strong>importar</strong> el fichero para crear una imagen en nuestra máquina, podemos usar “docker load”. </p>
+<pre><code>  - docker load -i copiaSeguridad.tar
+</code></pre>
+<p><a href="https://docs.docker.com/engine/reference/commandline/load/">https://docs.docker.com/engine/reference/commandline/load/</a></p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
